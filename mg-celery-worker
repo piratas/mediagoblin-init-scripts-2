@@ -1,5 +1,5 @@
 #!/bin/bash
-# /etc/init.d/mediagoblin-celery-worker
+# /etc/init.d/mg-celery-worker
 #
 ## LICENSE: CC0 <http://creativecommons.org/publicdomain/zero/1.0/>
 # To the extent possible under law, Joar Wandborg <http://wandborg.se> has
@@ -12,7 +12,7 @@
 # based upon.
 #
 ### BEGIN INIT INFO
-# Provides:          mediagoblin-celery-worker
+# Provides:          mg-celery-worker
 # Required-Start:    $network $named $local_fs
 # Required-Stop:     $remote_fs $syslog $network $named $local_fs
 # Should-Start:      postgres $syslog
@@ -27,7 +27,7 @@
 # CHANGE THIS
 # to suit your environment
 ################################################################################
-MG_ROOT=/var/www/media.luckey.se/mediagoblin
+MG_ROOT=/srv/biblioteca/biblioteca.pirata.xyz
 MG_USER=mediagoblin
 ################################################################################
 # NOW STOP
@@ -36,7 +36,7 @@ MG_USER=mediagoblin
 
 set -e
 
-DAEMON_NAME=mediagoblin-celery-worker
+DAEMON_NAME=mg-celery-worker
 
 MG_BIN=$MG_ROOT/bin
 MG_CELERYD_BIN=$MG_BIN/celery\ worker

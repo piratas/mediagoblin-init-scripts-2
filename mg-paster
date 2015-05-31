@@ -1,5 +1,5 @@
 #!/bin/sh
-# /etc/init.d/mediagoblin-paster
+# /etc/init.d/mg-paster
 #
 ## LICENSE: CC0 <http://creativecommons.org/publicdomain/zero/1.0/>
 # To the extent possible under law, Joar Wandborg <http://wandborg.se> has
@@ -12,7 +12,7 @@
 # based upon.
 #
 ### BEGIN INIT INFO
-# Provides:          mediagoblin-paster
+# Provides:          mg-paster
 # Required-Start:    $network $named $local_fs
 # Required-Stop:     $remote_fs $syslog $network $named $local_fs
 # Should-Start:      postgresql $syslog
@@ -27,8 +27,8 @@
 # CHANGE THIS
 # to suit your environment
 ################################################################################
-MG_ROOT=/home/joar/git/mediagoblin
-MG_USER=joar
+MG_ROOT=/srv/biblioteca/biblioteca.pirata.xyz
+MG_USER=mediagoblin
 ################################################################################
 # NOW STOP
 # You probably won't have to change anything else.
@@ -36,7 +36,7 @@ MG_USER=joar
 
 set -e
 
-DAEMON_NAME=mediagoblin-paster
+DAEMON_NAME=mg-paster
 
 MG_BIN=$MG_ROOT/bin
 MG_PASTER_BIN=$MG_BIN/paster
